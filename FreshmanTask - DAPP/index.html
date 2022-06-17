@@ -5,17 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.ethers.io/lib/ethers-5.2.umd.min.js" type="application/javascript"></script>
     <link rel="stylesheet" href="style.css">
     <title>Freshman Task - DAPP</title>
 </head>
 <body>
-    <!-- <header class="text-gray-400 bg-gray-900 body-font">
+    <header class="text-gray-400 bg-gray-900 body-font">
         <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
           <a class="flex title-font font-medium items-center text-white mb-4 md:mb-0">
-            <span class="ml-3 text-xl">Freshman DAPP Task</span>
+            <span id="display-name" class="ml-3 text-xl">Freshman DAPP Task</span>
           </a>
         </div>
-      </header>        -->
+      </header>       
       <section class="h-screen text-gray-400 bg-gray-900 body-font">
         <div class="container px-5 py-24 mx-auto">
           <div class="flex flex-col text-center w-full mb-12">
@@ -35,6 +36,8 @@
             <button class="btn" onclick="setName()">Set Name</button>
           </div>
         </div>
+        <!-- <h1>here</h1> -->
       </section>     
+        <script src="app.js"></script>
 </body>
 </html>
