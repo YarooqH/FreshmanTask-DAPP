@@ -1,0 +1,23 @@
+*{
+    overflow: hidden;
+}
+
+.btn{
+    text-align: center;
+    width: 400px;
+    color: aliceblue;
+    background-color: #8560db;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border-radius: 4px;
+    font-weight: 400;
+}
+
+.btn:hover{
+    background-color: #4b367a;
+    color: aliceblue;
+}
+
+.text-xl {
+    cursor: pointer;
+}
