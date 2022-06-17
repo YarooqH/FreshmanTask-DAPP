@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.ethers.io/lib/ethers-5.2.umd.min.js" type="application/javascript"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Freshman Task - DAPP</title>
+</head>
+<body>
+    <header class="text-gray-400 bg-gray-900 body-font">
+        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+          <a class="flex title-font font-medium items-center text-white mb-4 md:mb-0">
+            <span id="display-mood" class="ml-3 text-xl">Freshman DAPP Task</span>
+          </a>
+        </div>
+      </header>       
+      <section class="h-screen text-gray-400 bg-gray-900 body-font">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="flex flex-col text-center w-full mb-12">
+            <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-white">Web3 DAO - Freshman Task</h1>
+            <p class="lg:w-2/3 mx-auto leading-relaxed text-base">LFG! 🚀 Learning Web3.0 with ethers.js and Solidity.</p>
+          </div>
+          <div class="flex lg:w-2/3 w-full sm:flex-row flex-col mx-auto px-8 sm:px-0 items-end sm:space-x-4 sm:space-y-0 space-y-4">
+            <div class="relative sm:mb-0 flex-grow w-full">
+              <label for="full-name" class="leading-7 text-sm text-gray-400">Mood</label>
+              <input type="text" id="full-mood" name="full-name" class="w-full bg-gray-800 bg-opacity-40 rounded border border-gray-700 focus:border-purple-500 focus:ring-2 focus:ring-purple-900 focus:bg-transparent text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+            </div>
+            <!-- <div class="relative sm:mb-0 flex-grow w-full"> -->
+              <!-- <label for="email" class="leading-7 text-sm text-gray-400">Email</label>
+              <input type="email" id="email" name="email" class="w-full bg-gray-800 bg-opacity-40 rounded border border-gray-700 focus:border-purple-500 focus:ring-2 focus:ring-purple-900 focus:bg-transparent text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"> -->
+            <!-- </div>  -->
+            <button class="btn" onclick="getMood()">Get Name</button>
+            <button class="btn" onclick="setMood()">Set Name</button>
+          </div>
+        </div>
+        <!-- <h1>here</h1> -->
+      </section>     
+        <script src="app.js"></script>
+</body>
+</html>
