@@ -1,4 +1,4 @@
-0x20775467f54CA6F30F0841932102e00C14b8AAB9
+0x2d7Af4843300df5347eB23f230A76a7dc29A65dD
 
 
 [
@@ -6,18 +6,18 @@
 		"inputs": [
 			{
 				"internalType": "string",
-				"name": "_name",
+				"name": "_mood",
 				"type": "string"
 			}
 		],
-		"name": "setName",
+		"name": "setMood",
 		"outputs": [],
 		"stateMutability": "nonpayable",
 		"type": "function"
 	},
 	{
 		"inputs": [],
-		"name": "getName",
+		"name": "getMood",
 		"outputs": [
 			{
 				"internalType": "string",

@@ -1,21 +1,21 @@
-const nameCollectorContractAdd = "0x20775467f54CA6F30F0841932102e00C14b8AAB9";
-const nameCollectorContractABI = [
+const moodDiaryContractAdd = "0x2d7Af4843300df5347eB23f230A76a7dc29A65dD";
+const moodDiaryContractABI = [
 	{
 		"inputs": [
 			{
 				"internalType": "string",
-				"name": "_name",
+				"name": "_mood",
 				"type": "string"
 			}
 		],
-		"name": "setName",
+		"name": "setMood",
 		"outputs": [],
 		"stateMutability": "nonpayable",
 		"type": "function"
 	},
 	{
 		"inputs": [],
-		"name": "getName",
+		"name": "getMood",
 		"outputs": [
 			{
 				"internalType": "string",
@@ -27,8 +27,7 @@ const nameCollectorContractABI = [
 		"type": "function"
 	}
 ]
-
-let nameContract;
+let moodContract;
 let signer;
 
 const provider = new ethers.providers.Web3Provider(window.ethereum, "ropsten");
@@ -36,24 +35,23 @@ const provider = new ethers.providers.Web3Provider(window.ethereum, "ropsten");
 provider.send("eth_requestAccounts", []).then(() => {
     provider.listAccounts().then(accounts => {
         signer = provider.getSigner(accounts[0]);
-        nameContract = new ethers.Contract(
-            nameCollectorContractAdd,
-            nameCollectorContractABI,
+        moodContract = new ethers.Contract(
+            moodDiaryContractAdd,
+            moodDiaryContractABI,
             signer
         );
     });
 });
 
-const getName = async () => {
-    const getNamePromise = nameContract.getName();
-    const displayName = document.getElementById("display-name");
-    const name = await getNamePromise;
-    displayName.innerText = name;
-    // console.log(name);
+const getMood = async () => {
+    const getMoodPromise = moodContract.getMood();
+    const displayMood = document.getElementById("display-mood");
+    const mood = await getMoodPromise;
+    displayMood.innerText = mood;
 }
 
-const setName = async () => {
-    const name = document.getElementById("full-name").value;
-    const setNamePromise = await nameContract.setName(name);
-    await setNamePromise;
+const setMood = async () => {
+    const mood = document.getElementById("full-mood").value;
+    const setMoodPromise = await moodContract.setMood(mood);
+    await setMoodPromise;
 }
